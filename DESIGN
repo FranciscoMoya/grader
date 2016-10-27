@@ -1,18 +1,65 @@
-tengo un master-detail en ejercicio/datos del ejercicio
+Idea general
+------------
 
-tengo una lista de ejercicios
+Empieza con un logo grande de UCLM y de la EII, acompañado del título
+de la actividad.
 
-tengo una serie de datos globales de la prueba
-
-
-debo tener posibilidad de editar ejercicios y CRUD como admin pero
-eso es poco importante
-
+Al hacer scroll se reduce el tamaño del logo de la EII, del título de
+la actividad, y desaparece el resto.  Queda como un banner de
+CampusVirtual.  Lo mismo se puede hacer pinchando.
 
 
-necesito componentes para:
+Componentes:
 
-contenedor (tool)
-detalle
-submission
-ZZ
+- splash
+
+- task-nav
+- task-detail
+- task-submit
+- task-test-python
+
+- tasks-printable
+- task-admin
+- task-detail-edit
+
+Servicios:
+
+- task
+
+
+
+
+Opciones de estilo:
+
+- parallax (e.g. http://cwadrupldijjit.com/ng2-parallax/ts-examples)
+
+Puede usarse para que al avanzar en los ejercicios avance un progress
+indicator de algún tipo.
+
+- scrollspy (https://libraries.io/npm/ng2-scrollspy)
+
+Puede usarse para implementar nuestro propio comportamiento dinámico.
+
+¿Se puede usar https://valor-software.com/ng2-bootstrap ?
+
+
+- Upload:
+
+https://github.com/Alfresco/alfresco-ng2-components/blob/master/ng2-components/ng2-alfresco-upload/README.md
+
+- State management
+
+Es posible que interese esto https://github.com/ngrx/store para
+gestionar las transiciones de estado.
+
+- Splash screen 
+http://plnkr.co/edit/v8FtkSluRDSrkcq4v7a1?p=preview
+https://github.com/oxycoder/ng2-loading-animate#installation
+
+-Sliding panels
+
+https://blog.sstorie.com/building-an-slide-out-notification-drawer-with-angular-2-animations/
+
+- Clock para splash
+
+https://github.com/zackhall/ng2-clock
