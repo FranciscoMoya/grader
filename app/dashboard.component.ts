@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Task } from './task';
+import { TaskService } from './task.service';
 
 @Component({
     moduleId: module.id,
@@ -13,21 +13,20 @@ import { HeroService } from './hero.service';
 
 export class DashboardComponent implements OnInit {
 
-    heroes: Hero[] = [];
+    tasks: Task[] = [];
 
     constructor(
 	private router: Router,
-	private heroService: HeroService) {
+	private taskService: TaskService) {
     }
 
     ngOnInit(): void {
-	this.heroService.getHeroes()
-	    .then(heroes => this.heroes = heroes.slice(1, 5));
+	this.taskService.getTasks()
+	    .then(tasks => this.tasks = tasks.slice(1, 5));
     }
 
-    gotoDetail(hero: Hero): void {
-	let link = ['/detail', hero.id];
+    gotoDetail(task: Task): void {
+	let link = ['/detail', task.id];
 	this.router.navigate(link);
     }
 }
-
